@@ -23,6 +23,20 @@ public class MyLinkedList <E> {
 			this.head.setNext(tempNode);
 		}
 	}
+	
+	public void peek() {
+		while(head!=null) {
+			System.out.println(head.getKey());
+			pop();
+		}
+	}
+	
+	public void pop() {
+		System.out.println(head.getKey()+" popped from top of stack.");
+		INode temp = head.getNext();
+		head = temp;
+	}
+	
 	public void printList() {
 		StringBuffer printformat = new StringBuffer("My Nodes: ");
 		INode temp = this.head;

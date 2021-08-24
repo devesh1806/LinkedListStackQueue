@@ -14,5 +14,7 @@ public class StackQueueRunner {
 		myLinked.push(secondNode);
 		myLinked.push(thirdNode);
 		myLinked.printList();
+		
+		myLinked.peek();
 	}
 }
