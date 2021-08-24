@@ -1,16 +1,16 @@
 package com.linkedliststackqueue;
 
-public class MyLinkedList <E> {
+public class MyLinkedListQueue <E> {
 	private INode head;
 	private INode tail;
 	
-	public MyLinkedList() {
+	public MyLinkedListQueue() {
 		
 		this.head = null;
 		this.tail = null;
 	}
 	
-	public void add(INode myNode) {
+	public void append(INode myNode) {
 		if (this.head == null) {
 			this.head = myNode;
 		}
@@ -18,27 +18,13 @@ public class MyLinkedList <E> {
 			this.tail = myNode;
 		}
 		else {
-			INode tempNode = this.head;
-			this.head = myNode;
-			this.head.setNext(tempNode);
+			this.tail.setNext(myNode);
+			this.tail = myNode;
 		}
 	}
 	
-	public void push(INode myNode) {
-		add(myNode);
-	}
-	
-	public void peek() {
-		while(head!=null) {
-			System.out.println(head.getKey());
-			pop();
-		}
-	}
-	
-	public void pop() {
-		System.out.println(head.getKey()+" popped from top of stack.");
-		INode temp = head.getNext();
-		head = temp;
+	public void enQueue(INode myNode) {
+		append(myNode);
 	}
 	
 	

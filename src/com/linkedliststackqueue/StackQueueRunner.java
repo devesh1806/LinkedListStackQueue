@@ -1,4 +1,5 @@
 package com.linkedliststackqueue;
+import java.util.Scanner;
 
 public class StackQueueRunner {
 	public static void main(String[] args) {
@@ -8,11 +9,31 @@ public class StackQueueRunner {
 		MyNode<Integer> thirdNode = new MyNode<Integer>(56);
 		
 		MyLinkedList myLinked = new MyLinkedList();
+		MyLinkedListQueue myLinkedQueue = new MyLinkedListQueue();
 		
-		myLinked.push(firstNode);
-		myLinked.push(secondNode);
-		myLinked.push(thirdNode);
-		myLinked.printList();
-		myLinked.peek();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 1.Stack 2.Queue");
+		int choice = sc.nextInt();
+		switch(choice) {
+		case 1:
+			myLinked.push(firstNode);
+			myLinked.push(secondNode);
+			myLinked.push(thirdNode);
+			myLinked.printList();
+			
+			myLinked.peek();
+			break;
+			
+		case 2:
+			myLinkedQueue.enQueue(thirdNode);
+			myLinkedQueue.enQueue(secondNode);
+			myLinkedQueue.enQueue(firstNode);
+			myLinkedQueue.printList();
+			break;
+			
+		default:
+			break;
+			
+		}
 	}
 }
