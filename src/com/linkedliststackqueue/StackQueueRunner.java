@@ -9,12 +9,10 @@ public class StackQueueRunner {
 		
 		MyLinkedList myLinked = new MyLinkedList();
 		
-		System.out.println("Stack Implementation: ");
 		myLinked.push(firstNode);
 		myLinked.push(secondNode);
 		myLinked.push(thirdNode);
 		myLinked.printList();
-		
 		myLinked.peek();
 	}
 }

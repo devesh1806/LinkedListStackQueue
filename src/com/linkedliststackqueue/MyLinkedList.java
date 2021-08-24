@@ -10,7 +10,7 @@ public class MyLinkedList <E> {
 		this.tail = null;
 	}
 	
-	public void push(INode myNode) {
+	public void add(INode myNode) {
 		if (this.head == null) {
 			this.head = myNode;
 		}
@@ -22,6 +22,10 @@ public class MyLinkedList <E> {
 			this.head = myNode;
 			this.head.setNext(tempNode);
 		}
+	}
+	
+	public void push(INode myNode) {
+		add(myNode);
 	}
 	
 	public void peek() {
