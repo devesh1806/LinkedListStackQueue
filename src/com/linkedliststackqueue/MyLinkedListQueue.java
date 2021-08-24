@@ -27,6 +27,35 @@ public class MyLinkedListQueue <E> {
 		append(myNode);
 	}
 	
+	public void deQueue() {
+		while(head != null) {
+			System.out.println("Removed element " + head.getKey() + " from queue.");
+			delete();
+		}
+	}
+	
+	public void delete() {
+		INode temp = head.getNext();
+		head = temp;
+	}
+	
+	public void size() {
+		int count = 0;
+		while(head != null) {
+			head = head.getNext();
+			count++;
+		}
+		System.out.println("The Queue has "+ count + " elements.");
+	}
+	
+	public void isEmpty() {
+		if (head == null) {
+			System.out.println("Queue is Empty");
+		}
+		else {
+			System.out.println("There are elements in Queue");
+		}
+	}
 	
 	public void printList() {
 		StringBuffer printformat = new StringBuffer("My Nodes: ");

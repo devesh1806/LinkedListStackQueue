@@ -29,6 +29,10 @@ public class StackQueueRunner {
 			myLinkedQueue.enQueue(secondNode);
 			myLinkedQueue.enQueue(firstNode);
 			myLinkedQueue.printList();
+			
+			myLinkedQueue.deQueue();
+			myLinkedQueue.size();
+			myLinkedQueue.isEmpty();
 			break;
 			
 		default:
